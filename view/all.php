@@ -5,9 +5,6 @@ if(!isset($_SERVER['HTTP_REFERER'])){
     exit;
 }
 ?>
-<?php include_once('head.php'); ?>
-<?php include_once('header_admin.php'); ?>
-<?php include_once('sidebar.php'); ?>
 <?php include_once('alert.php'); ?>
 
 <style>
@@ -483,20 +480,6 @@ display:none;
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-	<!-- Content Header (Page header) -->
-    <section class="content-header">
-    	<h1>
-        	Tất cả Giảng Viên
-            <small>Xem trước</small>
-        </h1>
-        <ol class="breadcrumb">
-        	<li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-            <li><a href="#"><i class="fa fa-teacher"></i> Giảng Viên</a></li>
-            <li><a href="#"> Tất cả Giảng Viên </a></li>
-         </ol>
-     </section>
-
-    <!-- table for view all records //MSK-00112 -->
     <section class="content" > <!-- Start of table section -->
         <div class="row" id="table1"><!-- after delete methanata thamay overite karanne view_classroom table -->
             <div class="col-md-8">
@@ -1121,7 +1104,7 @@ $('#btnYes').click(function() {
 							}
 								
 						}
-						xhttp1.open("GET", "all.php" , true);												
+						xhttp1.open("GET", "all_teacher.php" , true);												
   						xhttp1.send(); //MSK-000136-End Ajax
 				
 				}
@@ -1514,4 +1497,3 @@ window.addEventListener("popstate", function() {
   	 	
 </div><!-- /.content-wrapper -->  
                              
-<?php include_once('footer.php');?>
